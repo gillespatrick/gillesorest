@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GillesoRest!{% endblock %}
+
+{% block body %}
+
+    <h1> {{ pluralize (pins | length, 'Pin' )}}  </h1>
+
+
+    {% for pin in pins %}
+
+        <article>
+            <h2>{{ pin.title }}</h2><br>
+            <p>{{pin.description}}</p>
+        </article>
+
+    {% endfor %}
+
+   
+{% endblock %}
